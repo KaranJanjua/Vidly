@@ -9,7 +9,7 @@ namespace Vidley.Controllers
 {
     public class MoviesController : Controller
     {
-        // GET: Movies
+        // GET: Movies/Random
         public ActionResult Random()
         {
 
@@ -18,6 +18,11 @@ namespace Vidley.Controllers
                 Name = "Shrek!"
             };
             return View(movie);
+        }
+
+        public ActionResult ByReleaseDate(int year, int month)
+        {
+            return Content(year+"/"+month);
         }
     }
 }
